@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 
 :root {
@@ -27,6 +24,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  font-size: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a {
+  font-family: inherit;
 }
 
 /* names of pages */
@@ -36,88 +50,169 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 
-  font-size: 8rem;
+  font-size: min(8rem, 16vw);
 
-  color: var(--primary-clr);
+  /* color: var(--primary-clr); */
 }
 
 /* names of sections */
 h2 {
-  margin: 1.5rem;
-  padding-top: 3rem;
+  margin: 0.5rem;
 
   text-align: center;
   text-transform: uppercase;
 
-  font-size: 6rem;
+  font-size: min(3rem, 6vw);
 
-  color: var(--primary-clr);
+  /* color: var(--primary-clr); */
 }
 
 /* names of subsections */
 h3 {
-  margin: 1rem;
-  padding-top: 2rem;
-
   text-align: center;
-  font-size: 4rem;
+  /* font-size: min(4rem, 8vw); */
 
-  color: var(--secondary-clr);
+  /* color: var(--secondary-clr); */
 }
 
 /* other titles (posts etc) */
 h4 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 
-  color: var(--accent-clr);
+  /* color: var(--accent-clr); */
 }
 
 p,
 pre {
   font-size: 1.25rem;
 
-  color: var(--text-clr);
+  /* color: var(--text-clr); */
 }
 
 a {
-  color: var(--accent-clr);
+  /* color: var(--accent-clr); */
 }
 
 .hidden {
   display: none;
 }
 
-@media only screen and (max-width: 450px) {
-  /* names of pages */
-  h1 {
-    margin: 1rem;
+/*  */
+/* App styles */
+/*  */
 
-    font-size: 5rem;
-  }
+.decks-container {
+  margin: 2rem;
 
-  /* names of sections */
-  h2 {
-    margin: 0.75rem;
-    padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8vw;
+}
 
-    font-size: 3.5rem;
-  }
+/* .card-deck > * {
+  border: 2px dotted black;
+} */
 
-  /* names of subsections */
-  h3 {
-    margin: 0.5rem;
-    padding-top: 1rem;
+.deck__bg {
+  width: calc(20vw + 5rem);
+  max-width: 20rem;
+}
 
-    font-size: 2.25rem;
-  }
+.deck__name {
+  text-align: center;
+}
 
-  /* other titles (posts etc) */
-  h4 {
-    font-size: 1.375rem;
-  }
+.deck__bg,
+.deck__name {
+  transition: transform 0.3s ease-in-out;
+}
 
-  p,
-  pre {
-    font-size: 1.1rem;
-  }
+.deck__bg:hover,
+.deck__bg:focus,
+.deck__name:hover,
+.deck__name:focus {
+  transform: scale(1.2);
+}
+
+/*  */
+/* second part */
+/*  */
+
+.statement-card {
+  width: calc(20vw + 5rem);
+  max-width: 20rem;
+  aspect-ratio: 0.625;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 3px solid gray;
+  border-radius: 2rem;
+
+  transition: transform 1s ease-in-out;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__text {
+  padding: 1rem;
+}
+
+.button {
+  padding: 2rem;
+
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  /* border: none; */
+  border-radius: 1rem;
+}
+
+.order-buttons {
+  margin: 2rem 5vw;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.order-button {
+  width: 20rem;
+  /* 
+  padding: 2rem;
+
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 1rem; */
+}
+
+.statement-cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.statement-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.results {
+  text-align: center;
+
+  font-size: 2rem;
 }
