@@ -6,21 +6,79 @@
 
     <link rel="icon" href="favicon.ico" />
 
-    <title>Page name</title>
+    <title>Priority cards</title>
 
-    <link href="default.css" rel="stylesheet" />
-    <!-- <link href="pageName.css" rel="stylesheet" /> -->
-    <!-- <script src="pageName.js" defer></script> -->
+    <link href="styles/index.css" rel="stylesheet" />
+    <script src="scripts/index.js" defer></script>
   </head>
   <body>
-    <!-- Delete this showcase -->
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <p>Paragraph</p>
+    <section class="section theme-select-section">
+      <h1>Izaberi temu</h1>
 
-    <p>huraaaaaaaa</p>
-    <!-- Start here -->
+      <div class="decks-container">
+        <div class="card-deck">
+          <img src="img/Priority cards logo.png" alt="" class="deck__bg" />
+          <h2 class="deck__name">Deck 01</h2>
+        </div>
+        <div class="card-deck">
+          <img src="img/Priority cards logo.png" alt="" class="deck__bg" />
+          <h2 class="deck__name">Deck 02</h2>
+        </div>
+        <div class="card-deck">
+          <img src="img/Priority cards logo.png" alt="" class="deck__bg" />
+          <h2 class="deck__name">Deck 03</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order-section">
+      <h1>Odaberi prioritet izjave</h1>
+
+      <div class="statement-card order-card">
+        <img src="https://picsum.photos/200" alt="" class="card__img" />
+        <p class="card__text">
+          Neka izjava Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <div class="order-buttons">
+        <button class="order-button button">Važno</button>
+        <button class="order-button button">Poželjno</button>
+        <button class="order-button button">Nepoželjno</button>
+        <button class="order-button button">Nedopustivo</button>
+      </div>
+    </section>
+
+    <section class="section comparison-section">
+      <h1>Odaberi važniju izjavu</h1>
+
+      <div class="statement-cards-container">
+        <div class="statement-card-container">
+          <div class="statement-card priority-card">
+            <img src="https://picsum.photos/200" alt="" class="card__img" />
+            <p class="card__text">
+              Neka izjava Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <button class="button priority-button">Odaberi</button>
+        </div>
+
+        <div class="statement-card-container">
+          <div class="statement-card priority-card">
+            <img src="https://picsum.photos/200" alt="" class="card__img" />
+            <p class="card__text">
+              Neka izjava Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <button class="button priority-button">Odaberi</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section">
+      <p class="results">Results:</p>
+    </section>
   </body>
 </html>
